@@ -24,7 +24,7 @@ struct PreenApp: App {
             DashboardView()
                 .environment(\.appEnvironment, appEnvironment)
                 .task {
-                    appEnvironment.metricsService.startPolling()
+                    await appEnvironment.metricsService.startPolling()
                 }
         }
         .modelContainer(sharedModelContainer)

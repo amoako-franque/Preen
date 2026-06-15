@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Dependency injection container for services. Injected into the SwiftUI environment.
 @Observable
-final class AppEnvironment {
+final class AppEnvironment: @unchecked Sendable {
     let xpcClient: XPCClient
     let metricsService: MetricsService
 
