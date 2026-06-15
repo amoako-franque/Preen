@@ -2,22 +2,18 @@
 //  PreenApp.swift
 //  Preen
 //
-//  Created by franque on 14/06/2026.
-//
 
 import SwiftUI
 import SwiftData
 
 @main
 struct PreenApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+    @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+    @State private var appEnvironment = AppEnvironment()
 
+    var sharedModelContainer: ModelContainer = {
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            return try PersistenceController.makeContainer()
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
@@ -25,8 +21,13 @@ struct PreenApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashboardView()
+                .environment(\.appEnvironment, appEnvironment)
+                .task {
+                    appEnvironment.metricsService.startPolling()
+                }
         }
         .modelContainer(sharedModelContainer)
+        .defaultSize(width: 960, height: 640)
     }
 }

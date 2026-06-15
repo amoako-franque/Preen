@@ -1,0 +1,28 @@
+# .swiftlint.yml — Preen
+included:
+  - Preen
+  - PreenHelper
+  - Shared
+  - PreenTests
+excluded:
+  - DerivedData
+  - .build
+
+opt_in_rules:
+  - empty_count
+  - closure_spacing
+  - explicit_init
+
+disabled_rules:
+  - trailing_whitespace
+
+line_length:
+  warning: 120
+  error: 150
+
+custom_rules:
+  no_remove_item:
+    name: "No removeItem"
+    regex: "FileManager.*removeItem"
+    message: "FORBIDDEN: Use trashItem() instead of removeItem() for user files."
+    severity: error

@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9DEDB1852FDF7305002C1869 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = PKGSPARKLE001 /* Sparkle */; };
+		9DEDB1862FDF7305002C1869 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = PKGSNAPSHOT001 /* SnapshotTesting */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		9DEDAEA22FDF6B77002C1869 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,17 +26,51 @@
 			remoteGlobalIDString = 9DEDAE8D2FDF6B76002C1869;
 			remoteInfo = Preen;
 		};
+		B1HELPERDEP001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DEDAE862FDF6B76002C1869 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DEDAEC12FDF6BB8002C1869;
+			remoteInfo = PreenHelper;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9DEDAEC02FDF6BB8002C1869 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9DEDAE8E2FDF6B76002C1869 /* Preen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Preen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DEDAEA12FDF6B77002C1869 /* PreenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PreenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DEDAEAB2FDF6B77002C1869 /* PreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DEDAEC22FDF6BB8002C1869 /* PreenHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PreenHelper; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B1SYNCEXCEPT001 /* Exceptions for "Preen" folder in "Preen" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				LaunchDaemons/com.obirasor.Preen.helper.plist,
+			);
+			target = 9DEDAE8D2FDF6B76002C1869 /* Preen */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9DEDAE902FDF6B76002C1869 /* Preen */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B1SYNCEXCEPT001 /* Exceptions for "Preen" folder in "Preen" target */,
+			);
 			path = Preen;
 			sourceTree = "<group>";
 		};
@@ -45,6 +84,16 @@
 			path = PreenUITests;
 			sourceTree = "<group>";
 		};
+		9DEDAEC32FDF6BB8002C1869 /* PreenHelper */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PreenHelper;
+			sourceTree = "<group>";
+		};
+		A1SHARED012FDF6BB8002C1869 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DEDB1852FDF7305002C1869 /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,10 +109,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DEDB1862FDF7305002C1869 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9DEDAEA82FDF6B77002C1869 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DEDAEBF2FDF6BB8002C1869 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -75,9 +133,11 @@
 		9DEDAE852FDF6B76002C1869 = {
 			isa = PBXGroup;
 			children = (
+				A1SHARED012FDF6BB8002C1869 /* Shared */,
 				9DEDAE902FDF6B76002C1869 /* Preen */,
 				9DEDAEA42FDF6B77002C1869 /* PreenTests */,
 				9DEDAEAE2FDF6B77002C1869 /* PreenUITests */,
+				9DEDAEC32FDF6BB8002C1869 /* PreenHelper */,
 				9DEDAE8F2FDF6B76002C1869 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +148,7 @@
 				9DEDAE8E2FDF6B76002C1869 /* Preen.app */,
 				9DEDAEA12FDF6B77002C1869 /* PreenTests.xctest */,
 				9DEDAEAB2FDF6B77002C1869 /* PreenUITests.xctest */,
+				9DEDAEC22FDF6BB8002C1869 /* PreenHelper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,19 +160,24 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DEDAEB52FDF6B77002C1869 /* Build configuration list for PBXNativeTarget "Preen" */;
 			buildPhases = (
+				B1SWIFTLINT001 /* SwiftLint */,
 				9DEDAE8A2FDF6B76002C1869 /* Sources */,
 				9DEDAE8B2FDF6B76002C1869 /* Frameworks */,
 				9DEDAE8C2FDF6B76002C1869 /* Resources */,
+				B1EMBEDSCRIPT001 /* Embed Privileged Helper */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B1HELPERDEP002 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				9DEDAE902FDF6B76002C1869 /* Preen */,
+				A1SHARED012FDF6BB8002C1869 /* Shared */,
 			);
 			name = Preen;
 			packageProductDependencies = (
+				PKGSPARKLE001 /* Sparkle */,
 			);
 			productName = Preen;
 			productReference = 9DEDAE8E2FDF6B76002C1869 /* Preen.app */;
@@ -135,6 +201,7 @@
 			);
 			name = PreenTests;
 			packageProductDependencies = (
+				PKGSNAPSHOT001 /* SnapshotTesting */,
 			);
 			productName = PreenTests;
 			productReference = 9DEDAEA12FDF6B77002C1869 /* PreenTests.xctest */;
@@ -163,6 +230,29 @@
 			productReference = 9DEDAEAB2FDF6B77002C1869 /* PreenUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		9DEDAEC12FDF6BB8002C1869 /* PreenHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DEDAEC62FDF6BB8002C1869 /* Build configuration list for PBXNativeTarget "PreenHelper" */;
+			buildPhases = (
+				9DEDAEBE2FDF6BB8002C1869 /* Sources */,
+				9DEDAEBF2FDF6BB8002C1869 /* Frameworks */,
+				9DEDAEC02FDF6BB8002C1869 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9DEDAEC32FDF6BB8002C1869 /* PreenHelper */,
+				A1SHARED012FDF6BB8002C1869 /* Shared */,
+			);
+			name = PreenHelper;
+			packageProductDependencies = (
+			);
+			productName = PreenHelper;
+			productReference = 9DEDAEC22FDF6BB8002C1869 /* PreenHelper */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +274,9 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 9DEDAE8D2FDF6B76002C1869;
 					};
+					9DEDAEC12FDF6BB8002C1869 = {
+						CreatedOnToolsVersion = 16.2;
+					};
 				};
 			};
 			buildConfigurationList = 9DEDAE892FDF6B76002C1869 /* Build configuration list for PBXProject "Preen" */;
@@ -195,6 +288,10 @@
 			);
 			mainGroup = 9DEDAE852FDF6B76002C1869;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				PKGREFSPARKLE001 /* XCRemoteSwiftPackageReference "Sparkle" */,
+				PKGREFSNAPSHOT001 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9DEDAE8F2FDF6B76002C1869 /* Products */;
 			projectDirPath = "";
@@ -203,6 +300,7 @@
 				9DEDAE8D2FDF6B76002C1869 /* Preen */,
 				9DEDAEA02FDF6B77002C1869 /* PreenTests */,
 				9DEDAEAA2FDF6B77002C1869 /* PreenUITests */,
+				9DEDAEC12FDF6BB8002C1869 /* PreenHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -231,6 +329,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B1EMBEDSCRIPT001 /* Embed Privileged Helper */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/PreenHelper",
+				"$(SRCROOT)/Preen/LaunchDaemons/com.obirasor.Preen.helper.plist",
+			);
+			name = "Embed Privileged Helper";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(WRAPPER_NAME)/Contents/Helper/PreenHelper",
+				"$(BUILT_PRODUCTS_DIR)/$(WRAPPER_NAME)/Contents/Library/LaunchDaemons/com.obirasor.Preen.helper.plist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nHELPER_SRC=\"${BUILT_PRODUCTS_DIR}/PreenHelper\"\nAPP=\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\"\nHELPER_DST=\"${APP}/Contents/Helper\"\nPLIST_SRC=\"${SRCROOT}/Preen/LaunchDaemons/com.obirasor.Preen.helper.plist\"\nPLIST_DST=\"${APP}/Contents/Library/LaunchDaemons\"\nmkdir -p \"${HELPER_DST}\" \"${PLIST_DST}\"\ncp \"${HELPER_SRC}\" \"${HELPER_DST}/PreenHelper\"\ncp \"${PLIST_SRC}\" \"${PLIST_DST}/com.obirasor.Preen.helper.plist\"\nchmod +x \"${HELPER_DST}/PreenHelper\"\n";
+		};
+		B1SWIFTLINT001 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  cd \"${SRCROOT}\" && swiftlint\nelse\n  echo \"warning: SwiftLint not installed. Run: brew install swiftlint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9DEDAE8A2FDF6B76002C1869 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -253,6 +392,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9DEDAEBE2FDF6BB8002C1869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +411,11 @@
 			isa = PBXTargetDependency;
 			target = 9DEDAE8D2FDF6B76002C1869 /* Preen */;
 			targetProxy = 9DEDAEAC2FDF6B77002C1869 /* PBXContainerItemProxy */;
+		};
+		B1HELPERDEP002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DEDAEC12FDF6BB8002C1869 /* PreenHelper */;
+			targetProxy = B1HELPERDEP001 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -303,10 +454,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -315,6 +466,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -322,13 +474,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 			};
 			name = Debug;
 		};
@@ -369,9 +522,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -379,11 +533,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 			};
 			name = Release;
 		};
@@ -393,23 +548,29 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Preen/Preen.entitlements;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Preen/Preview Content\"";
+				DEVELOPMENT_TEAM = 3LDL4JTNYW;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Preen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.obirasor.Preen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -418,24 +579,31 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Preen/Preen.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Preen/Preen-Release.entitlements";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Preen/Preview Content\"";
+				DEVELOPMENT_TEAM = 3LDL4JTNYW;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Preen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.obirasor.Preen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
@@ -451,7 +619,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.obirasor.PreenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Preen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Preen";
 			};
 			name = Debug;
@@ -468,7 +636,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.obirasor.PreenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Preen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Preen";
 			};
 			name = Release;
@@ -483,7 +651,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.obirasor.PreenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TEST_TARGET_NAME = Preen;
 			};
 			name = Debug;
@@ -498,8 +666,45 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.obirasor.PreenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TEST_TARGET_NAME = Preen;
+			};
+			name = Release;
+		};
+		9DEDAEC72FDF6BB8002C1869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PreenHelper/PreenHelper.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3LDL4JTNYW;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.obirasor.Preen.helper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		9DEDAEC82FDF6BB8002C1869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PreenHelper/PreenHelper.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3LDL4JTNYW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.obirasor.Preen.helper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
@@ -542,7 +747,48 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		9DEDAEC62FDF6BB8002C1869 /* Build configuration list for PBXNativeTarget "PreenHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DEDAEC72FDF6BB8002C1869 /* Debug */,
+				9DEDAEC82FDF6BB8002C1869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		PKGREFSNAPSHOT001 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.0;
+			};
+		};
+		PKGREFSPARKLE001 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		PKGSNAPSHOT001 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PKGREFSNAPSHOT001 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+		PKGSPARKLE001 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PKGREFSPARKLE001 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9DEDAE862FDF6B76002C1869 /* Project object */;
 }
